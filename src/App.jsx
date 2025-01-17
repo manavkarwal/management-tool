@@ -1,9 +1,10 @@
 import React from 'react'
+import Login from '../src/components/Auth/Login'
 
 const App = () => {
   return (
     <div>
-      <h1 className='text-blue-400'>manav karwal</h1>
+     <Login/>
     </div>
   )
 }
