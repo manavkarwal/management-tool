@@ -26,7 +26,7 @@ const Alltasks = () => {
       <div className='bg-yellow-400 justify-between rounded-md  flex items-stretch p-2 font-semibold  mt-1'>
         <h2>Sarthak</h2>
         <h3>Make a UI design</h3>
-        <h5>Status</h5>
+        <h5>Status</h5> 
       </div>
     </div>
   )
