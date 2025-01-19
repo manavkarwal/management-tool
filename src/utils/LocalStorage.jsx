@@ -1,8 +1,9 @@
-const employees = [
+const employees = [ 
     {
         "id": 1,
         "email": "employee1@example.com",
         "password": "123",
+        "firstname": "Arjun", // Indian name added
         "tasks": [
             {
                 "active": true,
@@ -34,12 +35,19 @@ const employees = [
                 "taskDate": "2025-01-18",
                 "category": "Meetings"
             }
-        ]
+        ],
+        "taskNumbers": {
+            "active": 1,
+            "newTask": 1,
+            "completed": 1,
+            "failed": 0
+        }
     },
     {
         "id": 2,
         "email": "employee2@example.com",
         "password": "123",
+        "firstname": "Ishita", // Indian name added
         "tasks": [
             {
                 "active": true,
@@ -71,12 +79,19 @@ const employees = [
                 "taskDate": "2025-01-15",
                 "category": "Team Management"
             }
-        ]
+        ],
+        "taskNumbers": {
+            "active": 1,
+            "newTask": 1,
+            "completed": 1,
+            "failed": 0
+        }
     },
     {
         "id": 3,
         "email": "employee3@example.com",
         "password": "123",
+        "firstname": "Rahul", // Indian name added
         "tasks": [
             {
                 "active": true,
@@ -108,12 +123,19 @@ const employees = [
                 "taskDate": "2025-01-18",
                 "category": "Finance"
             }
-        ]
+        ],
+        "taskNumbers": {
+            "active": 1,
+            "newTask": 1,
+            "completed": 1,
+            "failed": 0
+        }
     },
     {
         "id": 4,
         "email": "employee4@example.com",
         "password": "123",
+        "firstname": "Neha", // Indian name added
         "tasks": [
             {
                 "active": true,
@@ -145,12 +167,19 @@ const employees = [
                 "taskDate": "2025-01-17",
                 "category": "Inventory Management"
             }
-        ]
+        ],
+        "taskNumbers": {
+            "active": 1,
+            "newTask": 1,
+            "completed": 1,
+            "failed": 0
+        }
     },
     {
         "id": 5,
         "email": "employee5@example.com",
         "password": "123",
+        "firstname": "Ananya", // Indian name added
         "tasks": [
             {
                 "active": true,
@@ -182,7 +211,13 @@ const employees = [
                 "taskDate": "2025-01-16",
                 "category": "Documentation"
             }
-        ]
+        ],
+        "taskNumbers": {
+            "active": 1,
+            "newTask": 1,
+            "completed": 1,
+            "failed": 0
+        }
     }
 ];
 
