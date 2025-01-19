@@ -5,12 +5,14 @@ import TaskListNumber from '../Others/TaskListNumber'
 
 
 
-const EmployeeDashBoard = () => {
+const EmployeeDashBoard = ({data}) => {
+  
   return (
     <>
-    <Header/>
-    <TaskListNumber/>
-    <TaskList/>
+
+    <Header data={data} />
+    <TaskListNumber  data={data} />
+    <TaskList  data={data}/>
     </>
   )
 }

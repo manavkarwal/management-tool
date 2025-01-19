@@ -1,6 +1,7 @@
 import React from 'react'
 
-const Header = () => {
+const Header = ({data}) => {
+    
     return (
         <div className='flex items-end justify-between py-3 px-8 '>
             <div ><span className='text-3xl font-mono'>Hello! </span><br /> <span className='text-4xl font-semibold'>Manav 👋 </span></div>
