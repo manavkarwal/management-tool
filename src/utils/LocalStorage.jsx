@@ -37,10 +37,10 @@ const employees = [
             }
         ],
         "taskNumbers": {
-            "active": 1,
-            "newTask": 1,
+            "active": 11,
+            "newTask": 11,
             "completed": 1,
-            "failed": 0
+            "failed": 1
         }
     },
     {
