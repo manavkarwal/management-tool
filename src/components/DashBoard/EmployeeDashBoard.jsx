@@ -7,7 +7,7 @@ import TaskListNumber from '../Others/TaskListNumber'
 
 
 
-const EmployeeDashBoard = ({ data }) => {
+const EmployeeDashBoard = ({data}) => {
 
 
 

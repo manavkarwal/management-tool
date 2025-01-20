@@ -6,7 +6,7 @@ import Alltasks from '../Others/Alltasks'
 const AdminDashBoard = () => {
     return (
         <>
-            <Header />
+            <Header  />
             <CreateTask />
             <Alltasks/>
         </>
