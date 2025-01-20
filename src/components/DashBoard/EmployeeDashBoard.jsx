@@ -1,4 +1,4 @@
-
+//components/DashBoard/EmployeeDashBoard.jsx
 import Header from '../Others/Header'
 import TaskList from '../TaskList/TaskList'
 import TaskListNumber from '../Others/TaskListNumber'
@@ -6,8 +6,7 @@ import TaskListNumber from '../Others/TaskListNumber'
 
 
 
-
-const EmployeeDashBoard = ({data}) => {
+const EmployeeDashBoard = (props) => {
 
 
 
@@ -15,9 +14,9 @@ const EmployeeDashBoard = ({data}) => {
   return (
     <>
 
-      <Header data={data} />
-      <TaskListNumber data={data} />
-      <TaskList data={data} />
+      <Header changeUser={props.changeUser} data={props.data} />
+      <TaskListNumber data={props.data} />
+      <TaskList data={props.data}/>
     </>
   )
 }

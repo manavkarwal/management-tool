@@ -1,3 +1,4 @@
+//components/TaskList/AcceptTask.jsx
 import React from 'react'
 
 const AcceptTask = ({data}) => {

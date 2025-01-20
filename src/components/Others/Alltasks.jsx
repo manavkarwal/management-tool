@@ -1,9 +1,11 @@
+//components/Other/Alltasks.jsx
 import React, { useContext } from 'react'
 import { AuthContext } from '/projects/EMS/management tool/src/context/AuthProvider'
 
 const Alltasks = () => {
 
-  const authData = useContext(AuthContext);
+  const [userData, setUserData] = useContext(AuthContext);
+
   return (
     <div className='p-5 rounded mt-5' >
       <div className='bg-red-400 mb-2 py-2 px-4 flex justify-between rounded'>
@@ -14,7 +16,7 @@ const Alltasks = () => {
         <h2 className='text-lg font-medium w-1/5'>Failed</h2>
       </div>
       <div>
-        {authData.employees.map(function (elem ,idx) {
+        {userData.map(function (elem ,idx) {
           return <div key={idx} className='border-2 border-emerald-500 mb-2 py-2 px-4 flex justify-between rounded'>
             <h2  className='text-lg font-medium w-1/5 '>{elem.firstname}</h2>
             <h3 className='text-lg font-medium w-1/5 text-blue-400'>{elem.taskNumbers.newTask}</h3>
