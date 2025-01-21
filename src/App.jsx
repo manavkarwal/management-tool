@@ -13,30 +13,39 @@ const App = () => {
 
   useEffect(() => {
     
-      const loggedInUser = localStorage.getItem('loggedInUser')
+      const loggedInUserR = localStorage.getItem('loggedInUserRole')
       
-      if (loggedInUser) {
-        const userData = JSON.parse(loggedInUser)
+      if (loggedInUserR) {
+        const userData = JSON.parse(loggedInUserR)
         setUser(userData.role)
-        setloggedInUserData(userData.data)
       } 
     
   }, [])
+
+  useEffect(() => {
+    
+    const loggedInUserD = localStorage.getItem('loggedInUserData')
+    
+    if (loggedInUserD) {
+      const userData = JSON.parse(loggedInUserD)
+      setloggedInUserData(userData.data)
+    } 
+  
+}, [])
 
   const handleLogin = (email, password) => {
 
     if (email == 'admin@me.com' && password == '123') {
       setUser('admin')
-      localStorage.setItem('loggedInUser', JSON.stringify({ role: 'admin' }))
+      localStorage.setItem('loggedInUserRole', JSON.stringify({ role: 'admin' }))
     } else if (userData) {
       const employee = userData.find((e) => email == e.email && e.password == password)
       console.log(employee)
       if (employee) {
         setUser('employee')
         setloggedInUserData(employee)
-        localStorage.setItem('loggedInUser', JSON.stringify({ role: 'employee', data: employee }))
-        // localStorage.setItem('loggedInEmployee', JSON.stringify(employee))
-        
+        localStorage.setItem('loggedInUserRole', JSON.stringify({ role: 'employee'}))
+        localStorage.setItem('loggedInUserData', JSON.stringify({ data: employee }))  
       }
     } else {
       alert("Invalid Credentials")
@@ -49,7 +58,7 @@ const App = () => {
   return (
     <>
       {!user ? <Login handleLogin={handleLogin} /> : ''} 
-      {user == 'admin' ? <AdminDashBoard  changeUser={setUser} /> : (user == 'employee' ? <EmployeeDashBoard  changeUser={setUser}  data={loggedInUserData} /> : null)}
+      {user == 'admin' ? <AdminDashBoard role={user}  changeUser={setUser} /> : (user == 'employee' ? <EmployeeDashBoard  changeUser={setUser} data={loggedInUserData} /> : null)}
      
 
     </>

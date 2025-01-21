@@ -18,19 +18,27 @@ const CreateTask = () => {
         e.preventDefault()
 
 
-        setNewTask({ taskTitle, taskDate, assignTo, taskDate, category, taskDescription, active: false, newTask: true, failed: false, completed: false })
+        setNewTask({ taskTitle,
+             taskDate, assignTo, 
+             taskDate, category,
+              taskDescription,
+               active: false,
+                newTask: true,
+                 failed: false, 
+                 completed: false })
         const data = userData
 
-        data.forEach(function (elem) {
+         data.forEach(function (elem) {
             if (assignTo == elem.firstname) {
                 elem.tasks.push(newtask)
                 elem.taskNumbers.newTask = elem.taskNumbers.newTask + 1
-                console.log(elem)
+              
 
             }
         })
 
         setUserData(data)
+        console.log(data)
 
         setTaskTitle('')
         setTaskDate('')

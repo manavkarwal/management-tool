@@ -1,7 +1,9 @@
 //components/TaskList/AcceptTask.jsx
-import React from 'react'
+import React, { useContext } from 'react'
 
 const AcceptTask = ({data}) => {
+
+
     return (
         <>
             <div className='bg-red-400 h-full w-[320px] p-5 rounded-xl flex-shrink-0'>
@@ -11,8 +13,8 @@ const AcceptTask = ({data}) => {
                 </div>
                 <h2 className='text-2xl mt-2 font-bold'>{data.taskTitle}</h2>
                 <p className='mt-2 text-sm'>{data.taskDescription}</p>
-                <div className='flex justify-between items-center'>
-                    <button className='bg-green-500 p-1 mt-4 rounded-md '>mark as completed</button>
+                <div className='flex justify-between items-center'>     
+                <button className='bg-red-500 p-1 mt-4 rounded-md '>mark as completed</button>
                     <button className='bg-red-500 p-1 mt-4 rounded-md '>mark as failed</button>
                 </div>
             </div>

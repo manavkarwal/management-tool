@@ -7,7 +7,7 @@ import Alltasks from '../Others/Alltasks'
 const AdminDashBoard = (props) => {
     return (
         <>
-            <Header  changeUser={props.changeUser}  />
+            <Header role={props.role} changeUser={props.changeUser}  />
             <CreateTask />
             <Alltasks/>
         </>
